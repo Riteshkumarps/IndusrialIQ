@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-const API = "http://localhost:8000";
+const API = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 function Stat({ label, value }) {
   return (
@@ -16,6 +16,8 @@ function App() {
   const [selected, setSelected] = useState(null);
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState("");
+  const [editing, setEditing] = useState(false);
+  const [editValues, setEditValues] = useState({ brand: "", category: "" });
 
   async function loadProducts() {
     const res = await fetch(`${API}/api/products`);
@@ -77,20 +79,19 @@ function App() {
     }
   }
 
-  async function review(action) {
+  async function review(action, edits = {}) {
     if (!selected) return;
 
+    if (action === "edit" && !editing) {
+      setEditValues({
+        brand: selected.brand || "",
+        category: selected.category || "",
+      });
+      setEditing(true);
+      return;
+    }
+
     try {
-      let edits = {};
-
-      if (action === "edit") {
-        const brand = window.prompt("Brand", selected.brand || "");
-        if (brand === null) return;
-        const category = window.prompt("Category", selected.category || "");
-        if (category === null) return;
-        edits = { brand, category };
-      }
-
       setMessage(`${action === "edit" ? "Editing" : action === "approve" ? "Approving" : "Rejecting"} product...`);
 
       const res = await fetch(`${API}/api/review/${selected.id}`, {
@@ -110,6 +111,7 @@ function App() {
       }
 
       setSelected(data);
+      setEditing(false);
       await loadProducts();
       setMessage(
         action === "approve"
@@ -215,8 +217,24 @@ function App() {
 
               <div className="facts">
                 <div><span>Manufacturer</span><strong>{selected.manufacturer || "—"}</strong></div>
-                <div><span>Brand</span><strong>{selected.brand || "—"}</strong></div>
-                <div><span>Category</span><strong>{selected.category || "—"}</strong></div>
+                <div>
+                  <span>Brand</span>
+                  {editing ? (
+                    <input
+                      value={editValues.brand}
+                      onChange={(event) => setEditValues({ ...editValues, brand: event.target.value })}
+                    />
+                  ) : <strong>{selected.brand || "—"}</strong>}
+                </div>
+                <div>
+                  <span>Category</span>
+                  {editing ? (
+                    <input
+                      value={editValues.category}
+                      onChange={(event) => setEditValues({ ...editValues, category: event.target.value })}
+                    />
+                  ) : <strong>{selected.category || "—"}</strong>}
+                </div>
                 <div><span>Product Type</span><strong>{selected.product_type || "—"}</strong></div>
               </div>
 
@@ -291,13 +309,24 @@ function App() {
               </div>
 
               <div className="actions">
-                <button className="primary" onClick={() => review("approve")}>
-                  Approve
-                </button>
-                <button onClick={() => review("edit")}>Edit</button>
-                <button className="danger" onClick={() => review("reject")}>
-                  Reject
-                </button>
+                {editing ? (
+                  <>
+                    <button className="primary" onClick={() => review("edit", editValues)}>
+                      Save edit
+                    </button>
+                    <button onClick={() => setEditing(false)}>Cancel</button>
+                  </>
+                ) : (
+                  <>
+                    <button className="primary" onClick={() => review("approve")}>
+                      Approve
+                    </button>
+                    <button onClick={() => review("edit")}>Edit</button>
+                    <button className="danger" onClick={() => review("reject")}>
+                      Reject
+                    </button>
+                  </>
+                )}
               </div>
             </>
           )}
