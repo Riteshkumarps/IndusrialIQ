@@ -1,0 +1,15 @@
+Manufacturer Product Specification
+
+MPN: PDSH4816AF
+Brand: FRIGIDAIRE®
+Series: Professional Series
+Product Type: Dishwasher
+
+Voltage Rating: 120 V
+Amperage Rating: 15 A
+Mounting Type: Leg
+Number of Wash Cycles: 5
+Sound Level: 47 dBA
+Material: Stainless Steel
+
+This document is a demo source for the IndustrialIQ local RAG pipeline.

@@ -1,0 +1,297 @@
+[
+  {
+    "id": "55c8f88225ba",
+    "mpn": "PDSH4816AF",
+    "raw_description": "Dishwasher SS - Display Only",
+    "manufacturer_raw": "Rheem Manufacturing",
+    "brand_raw": null,
+    "manufacturer": "Rheem Manufacturing",
+    "brand": null,
+    "category": "Built-In Dishwashers",
+    "department": null,
+    "product_type": null,
+    "attributes": {
+      "material": {
+        "value": "Stainless Steel",
+        "uom": null,
+        "confidence": 0.8,
+        "evidence": {
+          "source": "raw_input",
+          "snippet": "stainless steel / SS",
+          "confidence": 0.8
+        }
+      }
+    },
+    "evidence": [
+      {
+        "source": "D:\\hkk\\IndustrialIQ_consistency_guardrails\\industrialiq\\backend\\documents\\sample_product.txt",
+        "snippet": "Manufacturer Product Specification\n\nMPN: PDSH4816AF\nBrand: FRIGIDAIRE®\nSeries: Professional Series\nProduct Type: Dishwasher\n\nVoltage Rating: 120 V\nAmperage Rating: 15 A\nMounting Type: Leg\nNumber of Wash Cycles: 5\nSound Level: 47 dBA\nMaterial: Stainless Steel\n\nThis document is a demo source for the IndustrialIQ local RAG pipeline.\n",
+        "confidence": 0.574
+      }
+    ],
+    "title": "Rheem Manufacturing PDSH4816AF Product",
+    "invoice_description": "RHEEM MANUFACTURING PDSH4816AF PRODUCT",
+    "mobile_description": "Rheem Manufacturing PDSH4816AF Product",
+    "short_description": "Rheem Manufacturing PDSH4816AF Product, Material: Stainless Steel.",
+    "long_description": "Rheem Manufacturing PDSH4816AF Product. Key specifications: Material: Stainless Steel.",
+    "validation": {
+      "checks": {
+        "manufacturer": true,
+        "brand": false,
+        "category": false,
+        "title_length": true,
+        "description_length": true,
+        "attributes": true,
+        "consistency_manufacturer_brand_master": true,
+        "consistency_category_description_consistency": true,
+        "consistency_product_type_category_consistency": true,
+        "consistency_attribute_category_consistency": true
+      },
+      "passed": 8,
+      "total": 10,
+      "status": "APPROVED",
+      "consistency": {
+        "checks": {
+          "manufacturer_brand_master": true,
+          "category_description_consistency": true,
+          "product_type_category_consistency": true,
+          "attribute_category_consistency": true
+        },
+        "issues": [],
+        "issue_count": 0,
+        "high_risk_count": 0,
+        "medium_risk_count": 0,
+        "passed": 4,
+        "total": 4,
+        "status": "PASS"
+      }
+    },
+    "quality_score": 80.0,
+    "needs_human_review": false,
+    "workflow_status": "APPROVED",
+    "resolution": {
+      "manufacturer_confidence": 100.0,
+      "brand_confidence": 0.0,
+      "classification_confidence": 0.85
+    }
+  },
+  {
+    "id": "55db4ae3dd49",
+    "mpn": "49-94-0107",
+    "raw_description": "Milw 4-1/2\" Performance+ Metal Cut Off Disc",
+    "manufacturer_raw": "Milwaukee Accessory",
+    "brand_raw": null,
+    "manufacturer": "Milwaukee Accessory",
+    "brand": null,
+    "category": "Cut-Off Discs",
+    "department": null,
+    "product_type": null,
+    "attributes": {
+      "diameter": {
+        "value": "1/2 in",
+        "uom": "in",
+        "confidence": 0.9,
+        "evidence": {
+          "source": "raw_input",
+          "snippet": "1/2\"",
+          "confidence": 0.9
+        }
+      }
+    },
+    "evidence": [
+      {
+        "source": "raw_input",
+        "snippet": "Milw 4-1/2\" Performance+ Metal Cut Off Disc",
+        "confidence": 0.7
+      }
+    ],
+    "title": "Milwaukee Accessory 49-94-0107 Product",
+    "invoice_description": "MILWAUKEE ACCESSORY 49-94-0107 PRODUCT",
+    "mobile_description": "Milwaukee Accessory 49-94-0107 Product",
+    "short_description": "Milwaukee Accessory 49-94-0107 Product, Diameter: 1/2 in.",
+    "long_description": "Milwaukee Accessory 49-94-0107 Product. Key specifications: Diameter: 1/2 in.",
+    "validation": {
+      "checks": {
+        "manufacturer": true,
+        "brand": false,
+        "category": false,
+        "title_length": true,
+        "description_length": true,
+        "attributes": true,
+        "consistency_manufacturer_brand_master": true,
+        "consistency_category_description_consistency": true,
+        "consistency_product_type_category_consistency": true,
+        "consistency_attribute_category_consistency": true
+      },
+      "passed": 8,
+      "total": 10,
+      "status": "REJECTED",
+      "consistency": {
+        "checks": {
+          "manufacturer_brand_master": true,
+          "category_description_consistency": true,
+          "product_type_category_consistency": true,
+          "attribute_category_consistency": true
+        },
+        "issues": [],
+        "issue_count": 0,
+        "high_risk_count": 0,
+        "medium_risk_count": 0,
+        "passed": 4,
+        "total": 4,
+        "status": "PASS"
+      }
+    },
+    "quality_score": 80.0,
+    "needs_human_review": true,
+    "workflow_status": "REJECTED",
+    "resolution": {
+      "manufacturer_confidence": 100.0,
+      "brand_confidence": 0.0,
+      "classification_confidence": 0.85
+    }
+  },
+  {
+    "id": "74907aab564a",
+    "mpn": "DW088CG",
+    "raw_description": "Dewalt Laser - Green Cross Line",
+    "manufacturer_raw": "DEWALT Black & Decker",
+    "brand_raw": "DEWALT®",
+    "manufacturer": "DEWALT Black & Decker",
+    "brand": "miluakeswee",
+    "category": "dsvfasdf",
+    "department": null,
+    "product_type": null,
+    "attributes": {},
+    "evidence": [
+      {
+        "source": "raw_input",
+        "snippet": "Dewalt Laser - Green Cross Line",
+        "confidence": 0.7
+      }
+    ],
+    "title": "DEWALT® DW088CG Product",
+    "invoice_description": "DEWALT® DW088CG PRODUCT",
+    "mobile_description": "DEWALT® DW088CG Product",
+    "short_description": "DEWALT® DW088CG Product.",
+    "long_description": "DEWALT® DW088CG Product.",
+    "validation": {
+      "checks": {
+        "manufacturer": true,
+        "brand": false,
+        "category": false,
+        "title_length": true,
+        "description_length": true,
+        "attributes": false,
+        "consistency_manufacturer_brand_master": false,
+        "consistency_category_description_consistency": true,
+        "consistency_product_type_category_consistency": true,
+        "consistency_attribute_category_consistency": true
+      },
+      "passed": 6,
+      "total": 10,
+      "status": "REVIEW",
+      "consistency": {
+        "checks": {
+          "manufacturer_brand_master": false,
+          "category_description_consistency": true,
+          "product_type_category_consistency": true,
+          "attribute_category_consistency": true
+        },
+        "issues": [
+          {
+            "code": "BRAND_MANUFACTURER_MISMATCH",
+            "severity": "high",
+            "message": "Brand 'miluakeswee' is not mapped to manufacturer 'DEWALT Black & Decker' in the master data.",
+            "fields": [
+              "manufacturer",
+              "brand"
+            ],
+            "expected_brands": [
+              "dewalt"
+            ]
+          }
+        ],
+        "issue_count": 1,
+        "high_risk_count": 1,
+        "medium_risk_count": 0,
+        "passed": 3,
+        "total": 4,
+        "status": "REVIEW"
+      }
+    },
+    "quality_score": 60.0,
+    "needs_human_review": true,
+    "workflow_status": "HUMAN_REVIEW",
+    "resolution": {
+      "manufacturer_confidence": 100.0,
+      "brand_confidence": 100.0,
+      "classification_confidence": 0.85
+    }
+  },
+  {
+    "id": "8bd1d4ce5001",
+    "mpn": "3200-20",
+    "raw_description": "Milw Voltage Detector w/ LED",
+    "manufacturer_raw": "Milwaukee Accessory",
+    "brand_raw": null,
+    "manufacturer": "Milwaukee Accessory",
+    "brand": null,
+    "category": "Unclassified",
+    "department": null,
+    "product_type": null,
+    "attributes": {},
+    "evidence": [
+      {
+        "source": "D:\\hkk\\IndustrialIQ_consistency_guardrails\\industrialiq\\backend\\documents\\sample_product.txt",
+        "snippet": "Manufacturer Product Specification\n\nMPN: PDSH4816AF\nBrand: FRIGIDAIRE®\nSeries: Professional Series\nProduct Type: Dishwasher\n\nVoltage Rating: 120 V\nAmperage Rating: 15 A\nMounting Type: Leg\nNumber of Wash Cycles: 5\nSound Level: 47 dBA\nMaterial: Stainless Steel\n\nThis document is a demo source for the IndustrialIQ local RAG pipeline.\n",
+        "confidence": 0.552
+      }
+    ],
+    "title": "Milwaukee Accessory 3200-20 Product",
+    "invoice_description": "MILWAUKEE ACCESSORY 3200-20 PRODUCT",
+    "mobile_description": "Milwaukee Accessory 3200-20 Product",
+    "short_description": "Milwaukee Accessory 3200-20 Product.",
+    "long_description": "Milwaukee Accessory 3200-20 Product.",
+    "validation": {
+      "checks": {
+        "manufacturer": true,
+        "brand": false,
+        "category": false,
+        "title_length": true,
+        "description_length": true,
+        "attributes": false,
+        "consistency_manufacturer_brand_master": true,
+        "consistency_category_description_consistency": true,
+        "consistency_product_type_category_consistency": true,
+        "consistency_attribute_category_consistency": true
+      },
+      "passed": 7,
+      "total": 10,
+      "status": "APPROVED",
+      "consistency": {
+        "checks": {
+          "manufacturer_brand_master": true,
+          "category_description_consistency": true,
+          "product_type_category_consistency": true,
+          "attribute_category_consistency": true
+        },
+        "issues": [],
+        "issue_count": 0,
+        "high_risk_count": 0,
+        "medium_risk_count": 0,
+        "passed": 4,
+        "total": 4,
+        "status": "PASS"
+      }
+    },
+    "quality_score": 70.0,
+    "needs_human_review": false,
+    "workflow_status": "APPROVED",
+    "resolution": {
+      "manufacturer_confidence": 100.0,
+      "brand_confidence": 0.0,
+      "classification_confidence": 0.2
+    }
+  }
+]
