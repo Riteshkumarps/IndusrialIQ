@@ -77,7 +77,7 @@ industrialiq/
 
 The following architecture shows the complete IndustrialIQ pipeline:
 
-![IndustrialIQ System Architecture](assets/architecture.png)
+![IndustrialIQ System Architecture](assets/architecture.jpeg)
 ![IndustrialIQ Dashboard](assets/dashboard.png)
 
 ## 1. Backend setup
