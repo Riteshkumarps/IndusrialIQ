@@ -15,7 +15,7 @@ is transformed into:
 - category classification
 - attribute extraction
 - unit normalization
-- source/evidence records
+- source/evidence records/ v 
 - product title and descriptions
 - validation
 - confidence score
@@ -72,6 +72,13 @@ industrialiq/
 └── sample/
     └── sample_input.csv
 ```
+
+## 🏗️ System Architecture
+
+The following architecture shows the complete IndustrialIQ pipeline:
+
+![IndustrialIQ System Architecture](assets/architecture.png)
+![IndustrialIQ Dashboard](assets/dashboard.png)
 
 ## 1. Backend setup
 
