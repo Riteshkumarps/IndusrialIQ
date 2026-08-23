@@ -49,7 +49,7 @@
       },
       "passed": 8,
       "total": 10,
-      "status": "REVIEW",
+      "status": "APPROVED",
       "consistency": {
         "checks": {
           "manufacturer_brand_master": true,
@@ -67,8 +67,8 @@
       }
     },
     "quality_score": 80.0,
-    "needs_human_review": true,
-    "workflow_status": "HUMAN_REVIEW",
+    "needs_human_review": false,
+    "workflow_status": "APPROVED",
     "resolution": {
       "manufacturer_confidence": 100.0,
       "brand_confidence": 0.0,
