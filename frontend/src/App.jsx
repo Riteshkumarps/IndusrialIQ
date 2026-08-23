@@ -126,6 +126,16 @@ function App() {
     }
   }
 
+  function handleReviewAction(action, edits) {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    review(action, edits);
+  }
+
+  function cancelEdit() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setEditing(false);
+  }
+
 
   return (
     <div className="app">
@@ -311,18 +321,18 @@ function App() {
               <div className="actions">
                 {editing ? (
                   <>
-                    <button className="primary" onClick={() => review("edit", editValues)}>
+                    <button className="action-button primary" onClick={() => handleReviewAction("edit", editValues)}>
                       Save edit
                     </button>
-                    <button onClick={() => setEditing(false)}>Cancel</button>
+                    <button className="action-button" onClick={cancelEdit}>Cancel</button>
                   </>
                 ) : (
                   <>
-                    <button className="primary" onClick={() => review("approve")}>
+                    <button className="action-button primary" onClick={() => handleReviewAction("approve")}>
                       Approve
                     </button>
-                    <button onClick={() => review("edit")}>Edit</button>
-                    <button className="danger" onClick={() => review("reject")}>
+                    <button className="action-button" onClick={() => handleReviewAction("edit")}>Edit</button>
+                    <button className="action-button danger" onClick={() => handleReviewAction("reject")}>
                       Reject
                     </button>
                   </>

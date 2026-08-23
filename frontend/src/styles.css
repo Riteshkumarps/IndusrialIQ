@@ -343,6 +343,25 @@ footer a {
   text-decoration: none;
 }
 
+.actions .action-button {
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.actions .action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px rgba(0, 0, 0, .22);
+}
+
+.actions .action-button:active {
+  animation: button-press 260ms ease;
+}
+
+@keyframes button-press {
+  0% { transform: scale(1); }
+  45% { transform: scale(.94); }
+  100% { transform: scale(1); }
+}
+
 .actions .primary {
   background: #1d756d;
   border-color: #2a9c90;
